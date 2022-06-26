@@ -1,4 +1,6 @@
-#MYND
-![MYND logo](../MYND.png)
+MYND
+![MYND logo](./MYND.png)
+==========
+
 
 
