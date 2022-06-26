@@ -1,5 +1,5 @@
+![MYND](./MYNDlogo.png) &nbsp;&nbsp;&nbsp;&nbsp;
 MYND
-![MYND](./MYNDlogo.png) {: style="float:right;" }
 ==========
 MYND is a Swift app with a minimalistic interface that allows users to do a quick personal mental health
 check in by logging how their day went in less than 1 minute. After filling out the short form
