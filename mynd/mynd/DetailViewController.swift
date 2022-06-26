@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var dateAndWeek: UILabel!
     @IBOutlet weak var mOverallMood: UISlider!
     @IBOutlet weak var mSomethingFun: UISegmentedControl!
     @IBOutlet weak var mHighlights: UITextView!
@@ -23,6 +24,7 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let m = MoodBook.getSelectedItem()
+        dateAndWeek.text = m.date + " " + m.getWeekdayName()
         mOverallMood.setValue(Float(m.overallMood), animated: false)
         mSomethingFun.selectedSegmentIndex = m.somethingFun ? 0 : 1
         mHighlights.text = m.highlights

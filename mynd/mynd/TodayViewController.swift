@@ -14,7 +14,7 @@ class TodayViewController: UIViewController {
     @IBOutlet weak var somethingFun: UISegmentedControl!
     @IBOutlet weak var highlights: UITextView!
     @IBOutlet weak var onMyMind: UITextView!
-
+    
     var todaysMood: Mood!
     
     override func viewDidLoad() {

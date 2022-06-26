@@ -51,9 +51,9 @@ struct MoodBook {
     static func initMoods() {
         moods = loadMoods();
         if (moods.isEmpty) {
-            moods.append(Mood(date: "2022-06-01", overallMood: 5, somethingFun: true, highlights: "camp", onMyMind: "hackathon"))
-            moods.append(Mood(date: "2022-06-02", overallMood: 8, somethingFun: true, highlights: "bench kickoff", onMyMind: "asg training"))
-            moods.append(Mood(date: "2022-06-03", overallMood: 10, somethingFun: true, highlights: "TA", onMyMind: "birthday"))
+            moods.append(Mood(date: "2022-06-23", overallMood: 9, somethingFun: true, highlights: "lunch with friends", onMyMind: "need more sleep"))
+            moods.append(Mood(date: "2022-06-24", overallMood: 7, somethingFun: true, highlights: "hackathon starts", onMyMind: "lots of errors in xcode"))
+            moods.append(Mood(date: "2022-06-25", overallMood: 8, somethingFun: false, highlights: "hackathon", onMyMind: "sophomore bench kickoff planning"))
         }
     }
     
