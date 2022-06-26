@@ -46,6 +46,7 @@ struct Mood : Codable {
 
 struct MoodBook {
     static var moods = [Mood]()
+    static var selectedIndex : Int = 0
     
     static func initMoods() {
         moods = loadMoods();
@@ -77,6 +78,14 @@ struct MoodBook {
     
     static func setTodayMood(m: Mood) {
         moods[moods.count - 1].update(overallMood: m.overallMood, somethingFun: m.somethingFun, highlights: m.highlights, onMyMind: m.onMyMind)
+    }
+    
+    static func setSelectedItem(index: Int){
+        selectedIndex = index
+    }
+    
+    static func getSelectedItem() -> Mood {
+        return moods[selectedIndex]
     }
     
     static func moodsFileName() -> URL {

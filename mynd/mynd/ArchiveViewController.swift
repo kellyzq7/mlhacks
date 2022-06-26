@@ -14,6 +14,7 @@ class ArchiveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.titleView = UIView()
         
         archiveTableView.delegate = self
         archiveTableView.dataSource = self
@@ -23,7 +24,8 @@ class ArchiveViewController: UIViewController {
 
 extension ArchiveViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("hello")
+        MoodBook.setSelectedItem(index: indexPath.row)
+        performSegue(withIdentifier: "showdetail", sender: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {

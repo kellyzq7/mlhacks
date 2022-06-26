@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20CF6AB286909B9008ACFD6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20CF6AA286909B9008ACFD6 /* DetailViewController.swift */; };
 		A2BFE18828681D650091A39F /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFE18728681D650091A39F /* Mood.swift */; };
 		A2BFE18A2868CE910091A39F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFE1892868CE910091A39F /* TodayViewController.swift */; };
 		A2DE8821286796A700417285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE8820286796A700417285 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A20CF6AA286909B9008ACFD6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A2BFE18728681D650091A39F /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		A2BFE1892868CE910091A39F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A2DE881D286796A700417285 /* mynd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mynd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				A2DE883A286813D000417285 /* ArchiveViewController.swift */,
 				A2DE8824286796A700417285 /* ViewController.swift */,
 				A2BFE1892868CE910091A39F /* TodayViewController.swift */,
+				A20CF6AA286909B9008ACFD6 /* DetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				A2DE8821286796A700417285 /* AppDelegate.swift in Sources */,
 				A2DE8823286796A700417285 /* SceneDelegate.swift in Sources */,
 				A2DE883B286813D100417285 /* ArchiveViewController.swift in Sources */,
+				A20CF6AB286909B9008ACFD6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
