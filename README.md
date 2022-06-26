@@ -1,4 +1,4 @@
-# mlhacks
-
+#MYND
+![MYND logo](../MYND.png)
 
 
