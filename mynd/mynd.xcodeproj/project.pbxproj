@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A2BFE18828681D650091A39F /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFE18728681D650091A39F /* Mood.swift */; };
+		A2BFE18A2868CE910091A39F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFE1892868CE910091A39F /* TodayViewController.swift */; };
 		A2DE8821286796A700417285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE8820286796A700417285 /* AppDelegate.swift */; };
 		A2DE8823286796A700417285 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE8822286796A700417285 /* SceneDelegate.swift */; };
 		A2DE8825286796A700417285 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE8824286796A700417285 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A2BFE18728681D650091A39F /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		A2BFE1892868CE910091A39F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A2DE881D286796A700417285 /* mynd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mynd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DE8820286796A700417285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2DE8822286796A700417285 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				A2DE883A286813D000417285 /* ArchiveViewController.swift */,
 				A2DE8824286796A700417285 /* ViewController.swift */,
+				A2BFE1892868CE910091A39F /* TodayViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				A2BFE18828681D650091A39F /* Mood.swift in Sources */,
 				A2DE8825286796A700417285 /* ViewController.swift in Sources */,
+				A2BFE18A2868CE910091A39F /* TodayViewController.swift in Sources */,
 				A2DE8821286796A700417285 /* AppDelegate.swift in Sources */,
 				A2DE8823286796A700417285 /* SceneDelegate.swift in Sources */,
 				A2DE883B286813D100417285 /* ArchiveViewController.swift in Sources */,

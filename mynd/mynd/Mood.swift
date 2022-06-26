@@ -10,18 +10,37 @@ import UIKit
 
 struct Mood : Codable {
     var date: String
-    var week: String
-    var title: String
-    var info: String
-    var mood: Int
-    //let image: UIImage
+    var overallMood: Int
+    var somethingFun: Bool
+    var highlights: String
+    var onMyMind: String
+
     
-    init(date: String, week: String, title: String, info: String, mood: Int) {
+    init(date: String, overallMood: Int = 5, somethingFun: Bool = true, highlights: String = "", onMyMind: String = "") {
         self.date = date
-        self.week = week
-        self.title = title
-        self.info = info
-        self.mood = mood
+        self.overallMood = overallMood
+        self.somethingFun = somethingFun
+        self.highlights = highlights
+        self.onMyMind = onMyMind
+    }
+    
+    mutating func update(overallMood: Int = 5, somethingFun: Bool = true, highlights: String = "", onMyMind: String = "") {
+        self.overallMood = overallMood
+        self.somethingFun = somethingFun
+        self.highlights = highlights
+        self.onMyMind = onMyMind
+    }
+    
+    func getWeekdayName() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        let today = dateFormatter.date(from: self.date)!
+        
+        let weekFormatter = DateFormatter()
+        weekFormatter.dateFormat = "EEEE"
+        return weekFormatter.string(from: today)
     }
 }
 
@@ -31,9 +50,9 @@ struct MoodBook {
     static func initMoods() {
         moods = loadMoods();
         if (moods.isEmpty) {
-            moods.append(Mood(date: "2022-06-01", week: "Wednesday", title: "summer camp", info: "not that tired", mood: 8))
-            moods.append(Mood(date: "2022-06-02", week: "Thursday", title: "summer camp", info: "rlly tired but happy ", mood: 9))
-            moods.append(Mood(date: "2022-06-03", week: "Friday", title: "Hello World", info: "Hello World!", mood: 6))
+            moods.append(Mood(date: "2022-06-01", overallMood: 5, somethingFun: true, highlights: "camp", onMyMind: "hackathon"))
+            moods.append(Mood(date: "2022-06-02", overallMood: 8, somethingFun: true, highlights: "bench kickoff", onMyMind: "asg training"))
+            moods.append(Mood(date: "2022-06-03", overallMood: 10, somethingFun: true, highlights: "TA", onMyMind: "birthday"))
         }
     }
     
@@ -45,22 +64,19 @@ struct MoodBook {
         return moods[index];
     }
     
-    static func getTodayItem() -> Mood {
+    static func getTodayMood() -> Mood {
         let today = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let todayID = dateFormatter.string(from: today)
-        
-        if (!moods.isEmpty && moods[moods.count - 1].date == todayID) {
-            return moods[moods.count - 1]
-        } else {
-            let weekFormatter = DateFormatter()
-            weekFormatter.dateFormat = "EEEE"
-            let dayInWeek = weekFormatter.string(from: today)
-            let todayMood = Mood(date: todayID, week: dayInWeek, title: "", info: "", mood: 0)
-            moods.append(todayMood)
-            return todayMood
+        if (moods.isEmpty || moods.last!.date < todayID) {
+            moods.append(Mood(date: todayID))
         }
+        return moods.last!
+    }
+    
+    static func setTodayMood(m: Mood) {
+        moods[moods.count - 1].update(overallMood: m.overallMood, somethingFun: m.somethingFun, highlights: m.highlights, onMyMind: m.onMyMind)
     }
     
     static func moodsFileName() -> URL {
@@ -103,4 +119,5 @@ struct MoodBook {
         }
     }
 }
+
 

@@ -25,6 +25,10 @@ extension ArchiveViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("hello")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        archiveTableView.reloadData()
+    }
 }
 
 extension ArchiveViewController: UITableViewDataSource {
@@ -35,9 +39,8 @@ extension ArchiveViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
         let mood = MoodBook.getItem(index: indexPath.row)
-        cell.textLabel!.text = mood.date + " " + mood.week
-        cell.detailTextLabel?.text = mood.title
-        
+        cell.textLabel!.text = mood.date + " " + mood.getWeekdayName()
+        cell.detailTextLabel?.text = "Overall day: " + String(mood.overallMood)
         return cell
     }
 }
